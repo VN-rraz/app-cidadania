@@ -7,30 +7,25 @@
     <title>Departamento do estado</title>
     <style>
         body{
-            background-color: rgba(118, 185, 163, 0.521);
+            background-color: rgba(185, 131, 118, 0.521);
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 2em;
-            
+            font-size: 2em;            
         }
         h1{
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: sans-serif;
             text-align: center;
-            color: rgb(88, 86, 86);
-            text-shadow: 3px 2px 5px rgba(0, 0, 0, 0.719);
-            font-size: 1.5em;
-           
+            color: rgb(53, 52, 52);
+            text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.411);
+            font-size: 1.5em;           
         }
         main{
             font-size: .8em;
-            background-color: rgb(121, 168, 170);
+            background-color: rgb(170, 121, 121);
             box-shadow: 3px 3px 5px black;
-
             margin: auto;
             padding: 30px 10px;
-
             text-align: center;
             border-radius: 3px 30px;
-
             min-width: 300px;
             max-width: 800px;
         }
@@ -41,24 +36,21 @@
         #botao{
             margin: auto;
             padding: 15px;
-
             min-width: 300px;
             max-width: 800px;
-
-            background-color: cornflowerblue;
+            background-color: rgb(237, 100, 100);
             color: whitesmoke;
-
             font-size: 1.1em;
             font-style: italic;
             font-family: sans-serif;
-
             border-radius: 20px;
             box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.644);
         }
         #botao:hover{
-            background-color: rgb(233, 233, 156);
-            color: black;
-            border-color: darkgoldenrod;
+            background-color: rgb(218, 218, 86);
+            color: black;        
+            border-color: rgb(184, 173, 11);
+            border-radius: 50px;
             transition: 1s;
         }
         input{
@@ -66,40 +58,60 @@
             box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.397);
             padding: 10px 30px ;
             margin-bottom: 20px;
-            margin-top: 20px;
         }
-
+        p{
+            color: whitesmoke;
+        }
     </style>
-    
 </head>
 <body>
     <h1>Identificação de cidadão</h1>
-
     <main>
         Em qual país você nasceu? <input type="text" name="país" id="país">
         <input type="button" value="Verificar" onclick="verificar()" id="botao">
-    <div id="res">
-
-
-    </div>
+    <div id="res"></div>
     </main>
-
-    <script>
-        function verificar(){
-
-            var textop = document.querySelector('#país')
-            var origem = String(textop.value)
-            var resultado = document.querySelector('#res')
-            var país = 'Brasil'
-
-            res.innerHTML = `Você nasceu no país: <strong>${origem}</strong>. `
-
-           if(origem == 'Brasil'){
-               res.innerHTML += `Você é brasileiro!`
-           }else{
-               res.innerHTML += 'Você é estrangeiro!'
-           }
-        }
-    </script>
+     <script>
+            function verificar(){
+                var textop = document.querySelector('#país')
+                var origem = String(textop.value)
+                var resultado = document.querySelector('#res')
+                var país = 'Brasil'
+                res.innerHTML = `Você nasceu no país: <strong>${origem}</strong>. `
+               if(origem == 'Brasil'){
+                   res.innerHTML += `Você é brasileiro!`
+               }else{
+                    if(origem == 'brasil'){
+                        res.innerHTML += `Você é brasileiro!`
+                   }else{
+                        if(origem == 'brasil '){
+                            res.innerHTML += `Você é brasileiro!`
+                        }else{
+                            if(origem == 'Brasil '){
+                                res.innerHTML += `Você é brasileiro!`
+                            }else{
+                                if(origem == 'brazil '){
+                                    res.innerHTML += `Você é brasileiro!`
+                                }else{
+                                    if(origem == 'brazil'){
+                                        res.innerHTML += `Você é brasileiro!`
+                                    }else{
+                                        if(origem == 'Brazil '){
+                                            res.innerHTML += `Você é brasileiro!`
+                                        }else{
+                                            if(origem == 'Brazil'){
+                                                res.innerHTML += `Você é brasileiro!`
+                                            }else{
+                                            res.innerHTML += 'Você é estrangeiro!'
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
 </body>
 </html>
