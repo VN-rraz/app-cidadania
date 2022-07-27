@@ -9,14 +9,14 @@
         body{
             background-color: rgba(185, 131, 118, 0.521);
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 2em;            
+            font-size: 2em;     
         }
         h1{
             font-family: sans-serif;
             text-align: center;
             color: rgb(53, 52, 52);
             text-shadow: 1px 3px 4px rgba(0, 0, 0, 0.411);
-            font-size: 1.5em;           
+            font-size: 1.5em;  
         }
         main{
             font-size: .8em;
@@ -62,56 +62,42 @@
         p{
             color: whitesmoke;
         }
-    </style>
+    </style> 
 </head>
 <body>
-    <h1>Identificação de cidadão</h1>
+    <h1>Identificador de cidadania</h1>
     <main>
-        Em qual país você nasceu? <input type="text" name="país" id="país">
+        <p><strong>Em qual país você nasceu?</strong></p> <input type="text" name="país" id="país">
         <input type="button" value="Verificar" onclick="verificar()" id="botao">
-    <div id="res"></div>
+        <div id="res"></div>
     </main>
-     <script>
-            function verificar(){
-                var textop = document.querySelector('#país')
-                var origem = String(textop.value)
-                var resultado = document.querySelector('#res')
-                var país = 'Brasil'
-                res.innerHTML = `Você nasceu no país: <strong>${origem}</strong>. `
-               if(origem == 'Brasil'){
-                   res.innerHTML += `Você é brasileiro!`
-               }else{
-                    if(origem == 'brasil'){
+    <script>
+        function verificar(){
+            var textop = document.querySelector('#país')
+            var origem = String(textop.value)
+            var resultado = document.querySelector('#res')
+            var país = 'Brasil'
+            res.innerHTML = `Você nasceu no país: <strong>${origem}</strong>. `
+            if(origem == 'Brasil'){
+                res.innerHTML += `Você é brasileiro!`
+            }else if(origem == 'brasil'){
+                    res.innerHTML += `Você é brasileiro!`
+            }else if(origem == 'brasil '){
                         res.innerHTML += `Você é brasileiro!`
-                   }else{
-                        if(origem == 'brasil '){
+            }else if(origem == 'Brasil '){
                             res.innerHTML += `Você é brasileiro!`
-                        }else{
-                            if(origem == 'Brasil '){
+            }else if(origem == 'brazil '){
                                 res.innerHTML += `Você é brasileiro!`
-                            }else{
-                                if(origem == 'brazil '){
-                                    res.innerHTML += `Você é brasileiro!`
-                                }else{
-                                    if(origem == 'brazil'){
-                                        res.innerHTML += `Você é brasileiro!`
-                                    }else{
-                                        if(origem == 'Brazil '){
-                                            res.innerHTML += `Você é brasileiro!`
-                                        }else{
-                                            if(origem == 'Brazil'){
-                                                res.innerHTML += `Você é brasileiro!`
-                                            }else{
-                                            res.innerHTML += 'Você é estrangeiro!'
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        </script>
+            }else if(origem == 'brazil'){
+                    res.innerHTML += `Você é brasileiro!`
+            }else if(origem == 'Brazil '){
+                        res.innerHTML += `Você é brasileiro!`
+            }else if(origem == 'Brazil'){
+                    res.innerHTML += `Você é brasileiro!`
+            }else{
+                res.innerHTML += 'Você é estrangeiro!'
+            }              
+        }
+    </script>    
 </body>
 </html>
